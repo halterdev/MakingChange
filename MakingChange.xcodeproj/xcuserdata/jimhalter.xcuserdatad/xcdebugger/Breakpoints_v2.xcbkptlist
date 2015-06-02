@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MakingChange/MainViewController.swift"
-            timestampString = "454894950.380497"
+            timestampString = "454905623.516391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MakingChange/MainViewController.swift"
-            timestampString = "454894950.380497"
+            timestampString = "454905662.057008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
@@ -42,12 +42,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MakingChange/MainViewController.swift"
-            timestampString = "454894969.10088"
+            timestampString = "454905969.368916"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "calculateTotalPot()"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "loadTransactions()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MakingChange.MainViewController.(loadTransactions in _D5ED717001ADA2F05B5FB1BA64BCB6B3) (MakingChange.MainViewController)() -&gt; ()"
+                  moduleName = "MakingChange"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimhalter/Documents/Development/iOS%20Apps/MakingChange/MakingChange/MainViewController.swift"
+                  timestampString = "454905737.169783"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "840">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MakingChange.MainViewController.((loadTransactions in _D5ED717001ADA2F05B5FB1BA64BCB6B3) (MakingChange.MainViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "MakingChange"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimhalter/Documents/Development/iOS%20Apps/MakingChange/MakingChange/MainViewController.swift"
+                  timestampString = "454905737.169941"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "3448">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MakingChange/MainViewController.swift"
+            timestampString = "454905969.368916"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "loadTransactions()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

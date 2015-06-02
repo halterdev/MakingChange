@@ -93,7 +93,7 @@
                     <connections>
                         <outlet property="btnDonate" destination="CHZ-mj-vI8" id="bSJ-mZ-IfL"/>
                         <outlet property="btnMenu" destination="KWz-dI-DlV" id="w3T-r7-Ts2"/>
-                        <outlet property="lblSavedAmount" destination="eG8-vU-2Xi" id="HPN-5l-e5n"/>
+                        <outlet property="lblSavedAmount" destination="eG8-vU-2Xi" id="e7Z-qU-Z6S"/>
                         <outlet property="tblTransactions" destination="cdk-Fm-xaF" id="RxW-OY-ag4"/>
                         <outlet property="topView" destination="ZZL-by-BWD" id="SaL-p1-0VR"/>
                         <outlet property="view" destination="cdk-Fm-xaF" id="gSi-N4-bmN"/>

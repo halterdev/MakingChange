@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Parse
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ENSideMenuDelegate {
     
@@ -16,11 +17,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var btnDonate: UIButton!
     
-    @IBOutlet weak var lblSavedAmount: UILabel!
+    @IBOutlet var lblSavedAmount: UILabel!
     
     @IBOutlet weak var tblTransactions: UITableView!
     
     var transactions: [Double]!
+    var transactionNames: [String]!
     
     var totalChange: Int = 0
     
@@ -45,9 +47,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         loadTransactions()
         
-        lblSavedAmount.text = "\(totalChange)"
-        
         self.tblTransactions.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        if(false)
+        {
+            Users.AddUser()
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -81,8 +86,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let string = NSMutableAttributedString()
         
-        let topString = NSAttributedString(string: "$0.\(change!)" + "\n", attributes: regFont)
-        let bottomString = NSAttributedString(string: "$\(amt)", attributes:italFont)
+        var topString = NSAttributedString(string: "$0.\(change!)" + "\n", attributes: regFont)
+        
+        if(change == 100)
+        {
+            topString = NSAttributedString(string: "$1.00" + "\n", attributes: regFont)
+        }
+        
+        let bottomString = NSAttributedString(string: "$\(amt)" + " - \(self.transactionNames![indexPath.row])", attributes:italFont)
         
         string.appendAttributedString(topString)
         string.appendAttributedString(bottomString)
@@ -125,8 +136,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                     if(self.transactions == nil)
                     {
                         self.transactions = [Double]()
+                        self.transactionNames = [String]()
                     }
+                    
                     self.transactions!.append(transactionDictionary.valueForKey("amount") as! Double)
+                    self.transactionNames!.append(transactionDictionary.valueForKey("name") as! String)
+                    
+                    if(!Transactions.DoesTransactionExist(transactionId: transactionDictionary.valueForKey("_id") as! String))
+                    {
+                        Transactions.AddTransaction(transactionId: transactionDictionary.valueForKey("_id") as! String, amount: transactionDictionary.valueForKey("amount") as! Double, name: transactionDictionary.valueForKey(("name")) as! String)
+                    }
                 }
                 self.tblTransactions.reloadData()
                 self.calculateTotalPot()
