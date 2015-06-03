@@ -367,6 +367,9 @@
                                     <segment title="LOGIN"/>
                                     <segment title="REGISTER"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="Qh5-ik-Zyo" eventType="valueChanged" id="rEa-z9-qFB"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6u-xX-Y0L">
                                 <rect key="frame" x="172" y="232" width="256" height="340"/>
@@ -425,6 +428,7 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Su2-Gf-Pbd" secondAttribute="centerX" id="J0f-Ei-bua"/>
                             <constraint firstItem="fZE-SH-YbR" firstAttribute="top" secondItem="Su2-Gf-Pbd" secondAttribute="bottom" constant="8" id="M8r-MJ-j3e"/>
+                            <constraint firstItem="h6u-xX-Y0L" firstAttribute="width" secondItem="fZE-SH-YbR" secondAttribute="width" constant="41" id="asz-jd-p12"/>
                             <constraint firstItem="h6u-xX-Y0L" firstAttribute="top" secondItem="Su2-Gf-Pbd" secondAttribute="bottom" constant="8" id="dtM-Lf-f7T"/>
                             <constraint firstItem="Su2-Gf-Pbd" firstAttribute="top" secondItem="suV-i3-fQb" secondAttribute="bottom" constant="176" id="iD3-Ua-It4"/>
                             <constraint firstItem="Su2-Gf-Pbd" firstAttribute="centerX" secondItem="fZE-SH-YbR" secondAttribute="centerX" constant="-0.5" id="mEh-vh-trn"/>
